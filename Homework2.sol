@@ -34,8 +34,17 @@ contract Homework2 {
         return false;
     }
 
-    // Since we don't need to modify "items", let's keep it in calldata
+    // If the order doesn't need to be preserved,
+    // and we're deleting just one item at a time
+    function deleteAtIndex(uint _index) public {
+        require(array.length > _index, "Invalid index or array is empty");
+        array[_index] = array[array.length - 1];
+        array.pop();
+    }
+
+    // If we're deleting multiple items simultaneously and preserving order
     function deleteItems(uint[] calldata items) public {
+        // Since we don't need to modify "items", let's keep it in calldata
         // unchecked: There's no possibility of underflow or overflow within this code
         unchecked {
             require(array.length >= items.length);
