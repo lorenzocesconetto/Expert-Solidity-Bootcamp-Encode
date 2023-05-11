@@ -6,7 +6,7 @@ contract Homework6 {
     function returnEth() public payable returns (uint) {
         assembly {
             mstore(0x00, callvalue())
-            return(0x0, 0x20)
+            return(0x00, 0x20)
         }
     }
 }
