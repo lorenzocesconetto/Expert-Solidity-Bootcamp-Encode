@@ -2,7 +2,11 @@
 
 By: Lorenzo Cano Cesconetto
 
+---
+
 ## 1. What are the advantages and disadvantages of the 256 bit word length in the EVM?
+
+---
 
 -   **Advantages:**
 
@@ -16,5 +20,7 @@ By: Lorenzo Cano Cesconetto
 ---
 
 ## 2. What would happen if the implementation of a precompiled contract varied between Ethereum clients?
+
+---
 
 The different clients would not come to a consensus and the network would end up with forks.

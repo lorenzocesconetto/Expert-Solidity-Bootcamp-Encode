@@ -2,7 +2,9 @@
 
 By: Lorenzo Cano Cesconetto
 
+---
 ## 1. Why is client diversity important for Ethereum
+---
 
 Having multiple and independent clients, i.e., diversity, makes the network more resilient to attacks and bugs.
 
@@ -21,6 +23,7 @@ Source: [Ethereum Foundation](https://ethereum.org/en/developers/docs/nodes-and-
 ---
 
 ## 2. Where is the full Ethereum state held?
+---
 
 The full Ethereum state is **NOT** stored on the blockchain.
 
@@ -44,6 +47,7 @@ Source: [Ethereum Blog](https://blog.ethereum.org/2015/06/26/state-tree-pruning)
 ---
 
 ## 3. What is a replay attack? Which 2 pieces of information can prevent it?
+---
 
 In a replay attack the attacker uses a previously signed transaction and is able to trick the blockchain into executing the transaction again.
 
@@ -56,6 +60,7 @@ The two pieces of information that prevent it are `v` and `nonce`.
 ---
 
 ## 4. In a contract, how do we know who called a view function?
+---
 
 View functions do **NOT** write to the state of the blockchain, it is restricted to only reading on-chain state information.
 

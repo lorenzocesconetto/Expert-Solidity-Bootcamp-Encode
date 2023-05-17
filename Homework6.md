@@ -4,12 +4,15 @@ By: Lorenzo Cano Cesconetto
 
 ## 1. Create a Solidity contract with one function. The solidity function should return the amount of ETH that was passed to it, and the function body should be written in assembly
 
+---
 
 Solution is at [Homework6.sol file](./Homework6.sol)
 
 ---
 
 ## 2. Do you know what this code is doing?
+
+---
 
 This contract is cloning itself into two other contracts. It sends `callvalue` Wei to the first contract upon creation, and then sends the remaing Wei upon self destruction to the second contract.
 The created contracts are identical to the original one.
@@ -45,10 +48,13 @@ function allowanceStorageOffset(account, spender) -> offset {
     offset := keccak256(0, 0x40)
 }
 ```
+
+---
+
 This code implements a `mapping` data structure.
 It returns an address from storage where the value of the allowance from `account` to `spender` is stored.
 Whoever calls this function may pass the return value to `sload` in order to obtain the allowance value.
 
-Each account has a unique `offset`.
+Each account has a unique `offset` to avoid hash overlaps.
 
 The `key` of the mapping is obtained by hashing (with `keccak256`) the `account offset` and the `spender` address.
